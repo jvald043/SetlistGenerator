@@ -1,16 +1,7 @@
 import os
 import pprint
-
-import requests
-import auth_key
-import json
-import requests
 import csv
 import sys
-import spotify_helper
-import spotipy
-from spotipy.oauth2 import SpotifyOAuth, SpotifyClientCredentials
-import spotipy.util as util
 from setlist_helper import get_musicbrainz_id, get_setlist_info
 
 #########################################################################

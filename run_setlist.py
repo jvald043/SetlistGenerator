@@ -1,21 +1,14 @@
 import os
 import pprint
-
-import requests
 import auth_key
-import json
-import requests
 import csv
 import sys
 from spotify_helper import spotify_init
-import spotipy
-from spotipy.oauth2 import SpotifyOAuth, SpotifyClientCredentials
-import spotipy.util as util
 from setlist_helper import get_musicbrainz_id, get_setlist_info
 
 #########################################################################
 # Test Variables
-artist_name = 'Rise Against'
+# artist_name = 'Rise Against'
 
 #########################################################################
 
@@ -27,7 +20,7 @@ def main():
     # and create a playlist out of it, to prepare for the show
 
     # Get Variables from User
-    # artist_name = input("Enter Artist Name: ")
+    artist_name = input("Enter Artist Name: ")
 
     # Future: provide second web page to finalize artist based on more information, when count > 1
 

@@ -1,6 +1,5 @@
 
 import auth_key
-
 import spotipy
 from spotipy.oauth2 import SpotifyOAuth, SpotifyClientCredentials
 
