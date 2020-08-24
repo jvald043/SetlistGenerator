@@ -10,11 +10,14 @@ User will need to create an auth_key.py file with the following variables:
 CLIENT_USER_ID = ''
 
 #### MBrains token and Setlist ID taken from respective sites
-MBRAINZ_TOKEN = ''
+MBRAINZ_TOKEN = '' 
+
 SETLIST_FM_ID = ''
 
 #### Client Token and user ID taken from Spotify Developers
 SPOTIPY_CLIENT_ID = ''
+
 SPOTIPY_CLIENT_SECRET = ''
+
 SPOTIPY_REDIRECT_URI = ''
 
