@@ -1,5 +1,7 @@
 # SetlistGenerator
-Retrieves songs last played at venues from SetlistFm and creates a playlist in Spotify for them
+This was created to automate the process of gathering songs from past setlists of an artist's concert you will attend in the future.
+
+Retrieves songs last played at venues from SetlistFm and creates a playlist in Spotify.
 
 Currently running the Python Script will prompt the user to type the band name
 
