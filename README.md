@@ -6,7 +6,7 @@ Retrieves songs last played at venues from SetlistFm and creates a playlist in S
 Currently running the Python Script will prompt the user to type the Artist/Band name.
 
 ## Notes:
-User will need to create an auth_key.py file with the following variables:
+User will need to create an config.py file with the following variables:
 
 #### Client User ID is taken from Spotify User ID
 CLIENT_USER_ID = ''

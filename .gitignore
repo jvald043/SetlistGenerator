@@ -1,5 +1,5 @@
 /venv/lib/python3.7/site-packages/spotipy/client.py
-auth_key.py
-testSpotify.py
+config.py
 /.cache-Valdm091
 /.cache-1292276561
+testSpotify.py

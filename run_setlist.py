@@ -1,6 +1,6 @@
 import os
 import pprint
-import auth_key
+import config
 import csv
 import sys
 from spotify_helper import spotify_init
@@ -8,7 +8,7 @@ from setlist_helper import get_musicbrainz_id, get_setlist_info
 
 #########################################################################
 # Test Variables
-# artist_name = 'Rise Against'
+artist_name = 'Rise Against'
 
 #########################################################################
 
@@ -20,7 +20,7 @@ def main():
     # and create a playlist out of it, to prepare for the show
 
     # Get Variables from User
-    artist_name = input("Enter Artist Name: ")
+    # artist_name = input("Enter Artist Name: ")
 
     # Future: provide second web page to finalize artist based on more information, when count > 1
 
@@ -139,10 +139,6 @@ def main():
                         )
     f.close()
 
-    # Once Setlist is created, push setlist to Spotify
-
-    # Create spotify client and scope to modify playlist
-    spot = spotify_init()
 
     # List of songs
     print(list_of_last_tour_songs)
@@ -155,6 +151,10 @@ def main():
     # print(list_of_last_tour_songs)
     print(list_of_songs)
 
+    # Once Setlist is created, push setlist to Spotify
+    # Create spotify client and scope to modify playlist
+    spot = spotify_init()
+
     # get URI for Track
     spotify_songs = {}
     for songs in list_of_songs:
@@ -165,7 +165,7 @@ def main():
 
     # create a playlist with Artist Name
     playlist = spot.user_playlist_create(
-        auth_key.CLIENT_USER_ID,
+        config.CLIENT_USER_ID,
         'Upcoming ' + artist_name + ' tour playlist',
         public=True,
         description='Playlist created of songs played by '
@@ -177,7 +177,7 @@ def main():
 
     for uri in spotify_songs.values():
         spot.user_playlist_add_tracks(
-            auth_key.CLIENT_USER_ID,
+            config.CLIENT_USER_ID,
             playlist['id'],
             [uri])
 

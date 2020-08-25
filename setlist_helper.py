@@ -1,5 +1,5 @@
 import requests
-import auth_key
+import config
 
 
 def get_musicbrainz_id(artist_name):
@@ -13,7 +13,7 @@ def get_musicbrainz_id(artist_name):
 
 def get_setlist_info(mbid):
     setlist_query = 'https://api.setlist.fm/rest/1.0/artist/{}/setlists?p=1'.format(mbid)
-    set_headers = {'Accept': 'application/json', 'x-api-key': auth_key.SETLIST_FM_ID}
+    set_headers = {'Accept': 'application/json', 'x-api-key': config.SETLIST_FM_ID}
     sreq = requests.get(setlist_query, headers=set_headers)
     # Get .json setlist_data
     setlist_data = sreq.json()
